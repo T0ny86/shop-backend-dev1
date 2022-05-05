@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "adresses",
+  "info": {
+    "singularName": "adress",
+    "pluralName": "adresses",
+    "displayName": "Adress"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "identifier": {
+      "type": "uid",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "street": {
+      "type": "string",
+      "required": true
+    },
+    "house_number": {
+      "type": "string",
+      "required": true
+    },
+    "zip_code": {
+      "required": true,
+      "type": "integer"
+    },
+    "is_shipment_adress": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "customer_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "identifier_adress"
+    }
+  }
+}
