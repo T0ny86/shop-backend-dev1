@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  adress controller
+ *  post controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::adress.adress');
+module.exports = createCoreController('api::post.post');

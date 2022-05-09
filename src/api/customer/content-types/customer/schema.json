@@ -4,17 +4,14 @@
   "info": {
     "singularName": "customer",
     "pluralName": "customers",
-    "displayName": "Customer"
+    "displayName": "Customer",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "identifier": {
-      "type": "uid",
-      "required": true
-    },
     "first_name": {
       "type": "string",
       "required": true
@@ -39,12 +36,6 @@
         "female",
         "trans"
       ]
-    },
-    "identifier_adress": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::adress.adress",
-      "inversedBy": "customer_id"
     }
   }
 }
